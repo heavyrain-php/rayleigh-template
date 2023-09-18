@@ -1,0 +1,33 @@
+{
+    "name": "heavyrain/rayleigh-template",
+    "description": "Rayleigh framework template",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../rayleigh"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "R\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Masaru Yamagishi",
+            "email": "akai_inu@live.jp"
+        }
+    ],
+    "require": {
+        "php": "^8.2.0",
+        "ext-json": "*",
+        "heavyrain/rayleigh": "^0.0.1",
+        "monolog/monolog": "^3.0.0"
+    },
+    "suggest": {
+        "ext-uv": "For more concurrent performance, install the ext-uv extension",
+        "ext-zlib": "For http message compression, install the ext-zlib extension"
+    }
+}

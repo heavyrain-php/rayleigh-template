@@ -1,0 +1,39 @@
+services:
+  api:
+    build:
+      context: .
+    volumes:
+      - .:/app:cached
+    ports:
+      - 1337:1337
+    working_dir: /app
+    depends_on:
+      - mysql
+      - redis
+
+  cli:
+    build:
+      context: .
+    volumes:
+      - .:/app:cached
+    working_dir: /app
+    entrypoint:
+      - /bin/bash
+      - ./r
+    command: []
+
+  mysql:
+    image: mysql:8.0-debian
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: reyleigh
+      MYSQL_USER: writer
+      MYSQL_PASSWORD: this_is_secret
+
+  redis:
+    image: redis:7-alpine
+
+volumes:
+  mysql: {}

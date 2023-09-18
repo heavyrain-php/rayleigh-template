@@ -1,0 +1,38 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI definition sample
+  description: |-
+    OpenAPI 3.0.3 definition sample.
+  contact:
+    email: akai_inu@live.jp
+  license:
+    name: MIT
+  version: 1.0.0
+externalDocs:
+  url: https://github.com/heavyrain/rayleigh-template/
+  description: Rayleigh Template Repository
+paths:
+  /:
+    get:
+      operationId: getIndex
+      summary: Get index
+      description: |-
+        Get index.
+      responses:
+        "200":
+          $ref: "#/components/responses/GetIndexResponse"
+components:
+  responses:
+    GetIndexResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              ok:
+                type: boolean
+                description: OK
+                example: true
+            required:
+              - ok
