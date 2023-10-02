@@ -6,6 +6,8 @@
 
 namespace R\Http\Handlers\Index\Get;
 
-return static function(IndexGetInput $input): IndexGetOutput {
-    return new IndexGetOutput(true);
+use R\Generated\Components\Responses\GetIndexResponse;
+
+return static function(): GetIndexResponse {
+    return new GetIndexResponse(ok: true);
 };

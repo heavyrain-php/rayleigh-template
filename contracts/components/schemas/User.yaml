@@ -1,0 +1,13 @@
+type: object
+properties:
+  id:
+    type: string
+    description: User ID
+    example: 1
+  name:
+    type: string
+    description: User name
+    example: John Doe
+required:
+  - id
+  - name

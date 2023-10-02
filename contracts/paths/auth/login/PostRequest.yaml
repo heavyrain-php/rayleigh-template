@@ -1,0 +1,4 @@
+content:
+  applicaiton/json:
+    schema:
+      $ref: ../../../components/schemas/LoginToken.yaml

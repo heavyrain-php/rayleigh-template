@@ -1,0 +1,17 @@
+post:
+  operationId: PostRegisterAuth
+  summary: Register new user
+  security: []
+  tags:
+    - User
+  description: |-
+    Register account
+  requestBody:
+    $ref: PostRequest.yaml
+  responses:
+    '200':
+      $ref: PostResponse.yaml
+    '4XX':
+      $ref: ../../../components/responses/InvalidRequestResponse.yaml
+    '5XX':
+      $ref: ../../../components/responses/InternalServerErrorResponse.yaml

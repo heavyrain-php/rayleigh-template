@@ -1,0 +1,15 @@
+get:
+  operationId: GetUsers
+  summary: Get users
+  security: []
+  tags:
+    - User
+  description: |-
+    Get users.
+  responses:
+    '200':
+      $ref: GetResponse.yaml
+    '4XX':
+      $ref: ../../components/responses/InvalidRequestResponse.yaml
+    '5XX':
+      $ref: ../../components/responses/InternalServerErrorResponse.yaml

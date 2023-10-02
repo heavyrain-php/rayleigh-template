@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        users:
+          type: array
+          description: Users
+          items:
+            $ref: ../../components/schemas/User.yaml
+      required:
+        - users

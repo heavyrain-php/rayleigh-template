@@ -1,0 +1,15 @@
+get:
+  operationId: GetIndex
+  security: []
+  summary: Get index
+  tags:
+    - Index
+  description: |-
+    Get index.
+  responses:
+    '200':
+      $ref: GetResponse.yaml
+    '4XX':
+      $ref: ../components/responses/InvalidRequestResponse.yaml
+    '5XX':
+      $ref: ../components/responses/InternalServerErrorResponse.yaml

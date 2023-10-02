@@ -4,9 +4,9 @@
  * @license MIT
  */
 
-namespace R\Http\Handlers\Index\Get;
+namespace R\Generated\Components\Responses;
 
-final readonly class IndexGetOutput implements \JsonSerializable
+final readonly class GetIndexResponse implements \JsonSerializable
 {
     public function __construct(
         public bool $ok,

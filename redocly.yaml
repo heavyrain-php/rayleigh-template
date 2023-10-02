@@ -1,0 +1,8 @@
+# See https://redocly.com/docs/cli/configuration/
+
+apis:
+  rayleigh-template@0.0.1:
+    root: ./contracts/openapi.yaml
+
+extends:
+  - recommended

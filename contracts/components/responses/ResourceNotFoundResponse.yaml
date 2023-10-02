@@ -1,0 +1,12 @@
+description: The requested resource was not found
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        ok:
+          type: boolean
+          description: OK
+          example: false
+      required:
+        - ok

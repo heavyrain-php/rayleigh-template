@@ -1,38 +1,35 @@
-openapi: 3.0.3
+openapi: 3.1.0
 info:
   title: OpenAPI definition sample
   description: |-
-    OpenAPI 3.0.3 definition sample.
+    OpenAPI 3.1.0 definition sample.
   contact:
     email: akai_inu@live.jp
   license:
     name: MIT
+    url: https://opensource.org/licenses/MIT
   version: 1.0.0
 externalDocs:
   url: https://github.com/heavyrain/rayleigh-template/
   description: Rayleigh Template Repository
+servers:
+  - url: http://localhost:3000
+    description: Local server
+tags:
+  - name: Auth
+    description: Auth
+  - name: Index
+    description: Index
+  - name: User
+    description: User
 paths:
   /:
-    get:
-      operationId: getIndex
-      summary: Get index
-      description: |-
-        Get index.
-      responses:
-        "200":
-          $ref: "#/components/responses/GetIndexResponse"
-components:
-  responses:
-    GetIndexResponse:
-      description: OK
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              ok:
-                type: boolean
-                description: OK
-                example: true
-            required:
-              - ok
+    $ref: './paths/PathItem.yaml'
+  /auth/register:
+    $ref: './paths/auth/register/PathItem.yaml'
+  /auth/login:
+    $ref: './paths/auth/login/PathItem.yaml'
+  /users:
+    $ref: './paths/users/PathItem.yaml'
+  /users/{userId}:
+    $ref: './paths/users/UserIdPathItem.yaml'

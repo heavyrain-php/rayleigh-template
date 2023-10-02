@@ -1,0 +1,24 @@
+parameters:
+  - name: userId
+    in: path
+    description: User ID
+    required: true
+    schema:
+      type: string
+get:
+  operationId: GetUser
+  summary: Get user
+  security: []
+  tags:
+    - User
+  description: |-
+    Get user.
+  responses:
+    '200':
+      $ref: UserIdGetResponse.yaml
+    '4XX':
+      $ref: ../../components/responses/InvalidRequestResponse.yaml
+    '404':
+      $ref: ../../components/responses/ResourceNotFoundResponse.yaml
+    '5XX':
+      $ref: ../../components/responses/InternalServerErrorResponse.yaml
